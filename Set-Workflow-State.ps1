@@ -20,6 +20,6 @@ foreach ($item in $config) {
 
 $workflowState = if ($IsEnabled) { 'Enabled' } else { 'Disabled' }
 
-$newAppSettings['Workflows.' + $WorkflowName + '.FlowState'] = $workflowState
+$newAppSettings[$workflowKey] = $workflowState
 
 Set-AzWebApp -ResourceGroupName $ResourceGroupName -Name $LogicAppName -AppSettings $newAppSettings
