@@ -8,4 +8,4 @@ To disable individual workflows in a Logic Apps Standard resource, you can add a
 The Set-Workflow-State.ps1 script allows you to pass in the name of a Logic App, a workflow name and a state, to enable or disable.
 
 ### Usage
-`Set-Workflow-State -ResourceGroupName {your resource group} -LogicAppName {your logic app name} -WorkflowName {your workflow name} -State {$True|$False} ` 
+`Set-Workflow-State -ResourceGroupName {your resource group} -LogicAppName {your logic app name} -WorkflowName {your workflow name} -IsEnabled {$True|$False} ` 

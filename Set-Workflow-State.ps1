@@ -22,4 +22,8 @@ $workflowState = if ($IsEnabled) { 'Enabled' } else { 'Disabled' }
 
 $newAppSettings[$workflowKey] = $workflowState
 
+Write-Host "Updating App Settings entry $workflowKey to $workflowState"
+
 Set-AzWebApp -ResourceGroupName $ResourceGroupName -Name $LogicAppName -AppSettings $newAppSettings
+
+Write-Host "Update complete, $workflowName is now set to $workflowState"
